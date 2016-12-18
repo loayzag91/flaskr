@@ -1,5 +1,5 @@
 # Flaskr
-First install app requirements:
+First install app requirements: (python 3.5)
 
     # pip install -r requirements.txt
 Pass app to to env var:
