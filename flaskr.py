@@ -131,10 +131,6 @@ def get_post(id):
         'text': posts['text'],
     }]
 
-#    if len(post) == 0:
-#        abort(404)
-# post for post in posts if posts['id'] == id
-
     return jsonify({'posts': post})
 
 
