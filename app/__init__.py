@@ -1,9 +1,10 @@
 from flask import Flask, render_template
+from app.config import conlist
 
 
-def create_app(app):
+def create_app(config_name):
     app = Flask(__name__)
-    app.config.from_object('app.config.DevelopmentConfig')
+    app.config.from_object(conlist[config_name])
 
     from app.models import db
     db.init_app(app)

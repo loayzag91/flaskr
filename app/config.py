@@ -17,3 +17,12 @@ class DevelopmentConfig(Config):
     DEBUG = True
     SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'flaskr.db')
 
+
+class TestingConfig(Config):
+    SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'flaskr.db')
+
+conlist = {
+        'development': DevelopmentConfig,
+        'testing': TestingConfig,
+        'default': DevelopmentConfig
+}
