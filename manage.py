@@ -16,7 +16,7 @@ manager.add_command("runserver", Server(host='0.0.0.0', port=80))
 def test():
     """Run the unit tests."""
     import unittest
-    tests = unittest.TestLoader().discover('tests')
+    tests = unittest.TestLoader().discover('tests', pattern='test*.py')
     unittest.TextTestRunner(verbosity=2).run(tests)
 
 if __name__ == '__main__':

@@ -5,6 +5,7 @@ from app.config import conlist
 def create_app(config_name):
     app = Flask(__name__)
     app.config.from_object(conlist[config_name])
+    conlist[config_name].init_app(app)
 
     from app.models import db
     db.init_app(app)
