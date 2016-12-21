@@ -9,9 +9,9 @@ Run startup script with manage.py:
 
 You can use shell with manage.py:
 
-		$ ./manage.py shell
+    $ ./manage.py shell
 
 Test suite can be run with:
 
-		$ ./manage.py test
+    $ ./manage.py test
 
