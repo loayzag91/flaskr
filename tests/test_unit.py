@@ -27,12 +27,6 @@ class FlaskrTestCase(unittest.TestCase):
         db.drop_all()
         self.app_context.pop()
 
-    def test_app_exists(self):
-        self.assertFalse(current_app is None, msg=None)
-
-    def test_app_is_testing(self):
-        self.assertTrue(current_app.config['TESTING'], msg=None)
-
     def test_db_is_created(self):
         rv = self.tester.get('/')
         assert b'No entries here so far' in rv.data

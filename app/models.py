@@ -17,3 +17,10 @@ class Entries(db.Model):
     def __repr__(self):
         return '{},{}'.format(self.title, self.text)
 
+    def to_json(self):
+        json_post = {
+            'id': self.id,
+            'title': self.title,
+            'text': self.text
+        }
+        return json_post
